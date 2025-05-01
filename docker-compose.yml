@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  minecraft:
+    build: .
+    ports:
+      - "13488:13488"
+    volumes:
+      - minecraft-world:/minecraft/world
+      - minecraft-nether:/minecraft/world_nether
+      - minecraft-end:/minecraft/world_the_end
+    environment:
+      - MEMORY=6G
+    restart: unless-stopped
+
+volumes:
+  paper-data:
