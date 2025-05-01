@@ -7,8 +7,7 @@ ENV MEMORY="6G"
 COPY . .
 
 RUN echo "eula=true" > eula.txt
-RUN echo "online-mode=false" > server.properties
-RUN echo "server-port=13488" > server.properties
+RUN printf "online-mode=false\nserver-port=13488\n" > server.properties
 
 EXPOSE 13488
 
