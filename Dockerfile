@@ -7,6 +7,7 @@ ENV MEMORY="6G"
 COPY . .
 
 RUN echo "eula=true" > eula.txt
+RUN echo "online-mode=false" > server.properties
 
 EXPOSE 13488
 
