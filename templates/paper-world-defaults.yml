@@ -16,7 +16,7 @@ _version: 31
 anticheat:
   anti-xray:
     enabled: true
-    engine-mode: 1
+    engine-mode: 2
     hidden-blocks:
     - diamond_ore
     - deepslate_diamond_ore
@@ -49,9 +49,10 @@ anticheat:
     - cave_air
     - void_air
     lava-obscures: true
-    max-block-height: 59
+    max-block-height: 128
     replacement-blocks:
     - air
+    - stone
     update-radius: 1
     use-permission: false
   obfuscation:
