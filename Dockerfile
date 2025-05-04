@@ -9,8 +9,12 @@ COPY . .
 RUN echo "eula=true" > eula.txt
 RUN printf "online-mode=false\nserver-port=13488\n" > server.properties
 
-RUN bash install_templates.sh
-RUN bash copy_core.sh
+ARG TEMPLATE_WORLD
+ARG CORE_NAME
+ENV TEMPLATE_WORLD=${TEMPLATE_WORLD:-0}
+ENV CORE_NAME=${CORE_NAME:-purpur-1.21.4-2416.jar}
+RUN bash install_templates.sh "$TEMPLATE_WORLD"
+RUN bash copy_core.sh "$CORE_NAME"
 
 EXPOSE 13488
 

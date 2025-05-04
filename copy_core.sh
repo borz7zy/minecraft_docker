@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [ -z "$1" ]; then
+  echo "Error: Argument CORE_NAME is not provided."
+  exit 1
+fi
+
+CORE_NAME="$1"
+
 if [ -z "$CORE_NAME" ]; then
   echo "Error: Environment variable CORE_NAME is not set."
   exit 1
