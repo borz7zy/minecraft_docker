@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 if [[ "$TEMPLATE_WORLD" == "1" ]]; then
     SOURCE="./templates/paper-world-defaults.yml"
