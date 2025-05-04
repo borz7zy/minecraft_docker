@@ -13,4 +13,6 @@ ENV CORE_NAME=${CORE_NAME:-purpur-1.21.4-2416.jar}
 
 EXPOSE 13488
 
-CMD ["./start.sh"]
+RUN chmod +x /minecraft/start.sh
+
+CMD ["/minecraft/start.sh"]
