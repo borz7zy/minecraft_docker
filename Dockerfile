@@ -1,5 +1,8 @@
 FROM openjdk:21-jdk-slim
 
+RUN apt-get update && \
+    apt-get install -y git
+
 WORKDIR /minecraft
 
 ENV MEMORY="6G"

@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [[ -z "${GITHUB_URL_PLUGINS}" ]]; then
+    echo "Variable GITHUB_URL_PLUGINS is empty. Cloning skipped."
+else
+    git clone ${GITHUB_URL_PLUGINS} plugins
+fi
+
 if [[ "$TEMPLATE_WORLD" == "1" ]]; then
     SOURCE="./templates/paper-world-defaults.yml"
     DEST_DIR="./config"
